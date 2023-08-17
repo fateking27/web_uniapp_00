@@ -116,7 +116,7 @@ export default {
       });
       ecom.getAllInfoProducttype({}).then((res) => {
         this.listGoodsType = res.data.rows.filter(
-          (item) => item.parentId != "0"
+          (item) => item.parentId == "1"
         );
         console.log(this.listGoodsType);
       });
