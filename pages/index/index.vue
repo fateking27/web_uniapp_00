@@ -2,7 +2,7 @@
 	<div class="content">
 		<view class="uni-margin-wrap">
 			<swiper class="swiper" circular :indicator-dots="true" :autoplay="true" :interval="2000" :duration="500">
-				<swiper-item v-for="item in banners">
+				<swiper-item v-for="item in banners" :key="item.id">
 					<view class="swiper-item uni-bg-red">
 						<img style="width: 100%;border-radius: 10px;display: block;" :src="item.imgURL" alt="">
 					</view>
@@ -18,7 +18,7 @@
 		<view class="grid">
 			<u-scroll-list class="grid_">
 				<!-- <u-scroll-list></u-scroll-list> -->
-				<view class="img" v-for="item in listGoodsType">
+				<view class="img" v-for="item in listGoodsType" :key="item.id">
 					<img :src="item.icon" alt="">
 					<view style="text-align: center;">
 						{{item.typeName}}
@@ -34,7 +34,7 @@
 			</view>
 
 			<u-scroll-list class="img">
-				<img v-for="(item, index) in 5" src="/static/0c49fa42bbfaf0abd0c93095c976199.png" />
+				<img v-for="(item, index) in 5" src="/static/0c49fa42bbfaf0abd0c93095c976199.png" :key="index"/>
 			</u-scroll-list>
 		</view>
 
@@ -78,6 +78,7 @@
 			init() {
 				ecom.getAllMtSwiper({}).then(res => {
 					this.banners = res.data.rows
+					console.log(this.banners)
 				})
 				ecom.getAllInfoProducttype({}).then(res => {
 					this.listGoodsType = res.data.rows.filter(item => item.parentId != "0");
