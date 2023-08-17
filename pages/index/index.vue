@@ -115,17 +115,13 @@ export default {
         console.log(this.banners);
       });
       ecom.getAllInfoProducttype({}).then((res) => {
-        this.listGoodsType = res.data.rows.filter(
-          (item) => item.parentId == "1"
-        );
+        this.listGoodsType = res.data.rows.filter((item) => item.parentId == "1");
         console.log(this.listGoodsType);
       });
-      ecom
-        .searchEcomProduct({
+      ecom.searchEcomProduct({
           curPage: 1,
           pageSize: 10,
-        })
-        .then((res) => {
+        }).then((res) => {
           this.listGoods = res.data.rows;
           console.log(this.listGoods);
         });

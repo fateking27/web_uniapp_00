@@ -7,7 +7,7 @@
 			"style": {
 				"navigationBarTitleText": "首页",
 				"navigationStyle": "custom",
-				"enablePullDownRefresh": true,
+				// "enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 					"type": "transparent",
