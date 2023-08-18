@@ -24,27 +24,26 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container {
+.category .saech_warp {
+  height: 25px;
+}
+.category .container {
   background-color: #fff;
   display: flex;
 }
-.container .saech_warp {
-  height: 15vh;
-  padding-top: 10rpx;
-}
-.container .first_warp {
+.category .container .first_warp {
   width: 20vw;
   background-color: #bcbcbc;
 }
-.container .first_warp .scroll-Y {
+.category .container .first_warp .scroll-Y {
   height: 100vh;
 }
-.container .first_warp .scroll-Y .first_item {
+.category .container .first_warp .scroll-Y .first_item {
   height: 35px;
   width: 100%;
   border-bottom: 1rpx solid #bc3204;
 }
-.container .second_warp {
+.category .container .second_warp {
   width: 80vw;
   height: 100vh;
   background-color: #e7f7f5;

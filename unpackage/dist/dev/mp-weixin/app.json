@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/mapPage/mapPage",
+    "pages/paintPage",
     "pages/index/index",
     "pages/category/category",
     "pages/shopcart/shopcart",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/userLogin/userLogin"
   ],
   "subPackages": [],
   "window": {
@@ -44,5 +47,14 @@
       }
     ]
   },
+  "permission": {},
+  "requiredPrivateInfos": [
+    "getLocation",
+    "onLocationChange",
+    "startLocationUpdateBackground"
+  ],
+  "requiredBackgroundModes": [
+    "location"
+  ],
   "usingComponents": {}
 }

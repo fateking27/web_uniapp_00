@@ -55,7 +55,10 @@
             "urlCheck" : false,
             "es6" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {},
+        "requiredPrivateInfos" : [ "getLocation", "onLocationChange", "startLocationUpdateBackground" ],
+        "requiredBackgroundModes" : [ "location" ]
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -69,5 +72,14 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "L6XBZ-T5HK4-SZNUI-KPJUR-QDHYF-3EFYW"
+                }
+            }
+        }
+    }
 }

@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8934,7 +8934,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8955,14 +8955,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9058,7 +9058,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"web_uni_app00","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -19242,7 +19242,19 @@ uni.addInterceptor({
 /* 162 */,
 /* 163 */,
 /* 164 */,
-/* 165 */
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */
 /*!************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/utils/ecom.js ***!
   \************************************************************************************/
@@ -19257,7 +19269,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 166));
+var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 178));
 var _default = {
   getAllMtSwiper: function getAllMtSwiper(params) {
     return _request.default.post("/api/getAllMtSwiper", params);
@@ -19272,7 +19284,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 166 */
+/* 178 */
 /*!***************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/utils/request.js ***!
   \***************************************************************************************/
@@ -19286,7 +19298,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _url = __webpack_require__(/*! url */ 167);
+var _url = __webpack_require__(/*! url */ 179);
 var base_url = "http://localhost:3000";
 var _default = {
   post: function post(url, params) {
@@ -19342,7 +19354,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 167 */
+/* 179 */
 /*!*********************************!*\
   !*** ./node_modules/url/url.js ***!
   \*********************************/
@@ -19373,8 +19385,8 @@ exports.default = _default;
 
 
 
-var punycode = __webpack_require__(/*! punycode */ 168);
-var util = __webpack_require__(/*! ./util */ 170);
+var punycode = __webpack_require__(/*! punycode */ 180);
+var util = __webpack_require__(/*! ./util */ 182);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -19449,7 +19461,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(/*! querystring */ 171);
+    querystring = __webpack_require__(/*! querystring */ 183);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -20085,7 +20097,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 168 */
+/* 180 */
 /*!**************************************************************************!*\
   !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
   \**************************************************************************/
@@ -20612,10 +20624,10 @@ Url.prototype.parseHost = function() {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ 169)(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ 181)(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-/* 169 */
+/* 181 */
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -20647,7 +20659,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 170 */
+/* 182 */
 /*!**********************************!*\
   !*** ./node_modules/url/util.js ***!
   \**********************************/
@@ -20674,7 +20686,7 @@ module.exports = {
 
 
 /***/ }),
-/* 171 */
+/* 183 */
 /*!***********************************************!*\
   !*** ./node_modules/querystring-es3/index.js ***!
   \***********************************************/
@@ -20684,12 +20696,12 @@ module.exports = {
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(/*! ./decode */ 172);
-exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 173);
+exports.decode = exports.parse = __webpack_require__(/*! ./decode */ 184);
+exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 185);
 
 
 /***/ }),
-/* 172 */
+/* 184 */
 /*!************************************************!*\
   !*** ./node_modules/querystring-es3/decode.js ***!
   \************************************************/
@@ -20784,7 +20796,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 173 */
+/* 185 */
 /*!************************************************!*\
   !*** ./node_modules/querystring-es3/encode.js ***!
   \************************************************/
@@ -20880,18 +20892,6 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
 /* 186 */,
 /* 187 */,
 /* 188 */,
@@ -20907,7 +20907,19 @@ var objectKeys = Object.keys || function (obj) {
 /* 198 */,
 /* 199 */,
 /* 200 */,
-/* 201 */
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */
 /*!****************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-notice-bar/props.js ***!
   \****************************************************************************************************************************/
@@ -20995,14 +21007,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */
 /*!*****************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-scroll-list/props.js ***!
   \*****************************************************************************************************************************/
@@ -21054,16 +21066,16 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */
 /*!**************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-loadmore/props.js ***!
   \**************************************************************************************************************************/
@@ -21175,14 +21187,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */
 /*!************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-search/props.js ***!
   \************************************************************************************************************************/
@@ -21318,14 +21330,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */
 /*!*******************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-column-notice/props.js ***!
   \*******************************************************************************************************************************/
@@ -21398,14 +21410,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */
 /*!****************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-row-notice/props.js ***!
   \****************************************************************************************************************************/
@@ -21462,14 +21474,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */
 /*!**********************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-line/props.js ***!
   \**********************************************************************************************************************/
@@ -21520,14 +21532,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */
 /*!******************************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
   \******************************************************************************************************************************/
@@ -21604,14 +21616,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */
 /*!**********************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-icon/icons.js ***!
   \**********************************************************************************************************************/
@@ -21842,7 +21854,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 268 */
+/* 280 */
 /*!**********************************************************************************************************************!*\
   !*** C:/Users/Administrator/OneDrive/HBuilderProjects/web_uni_app00/uni_modules/uview-ui/components/u-icon/props.js ***!
   \**********************************************************************************************************************/

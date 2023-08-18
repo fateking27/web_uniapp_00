@@ -32,25 +32,25 @@
 }
 .content .container {
   background-color: #fff;
-  border-radius: 6rpx;
+  border-radius: 6px;
   width: 90%;
-  height: 120rpx;
+  height: 120px;
   margin: 0 auto;
-  margin-top: 10rpx;
+  margin-top: 10px;
 }
 .content .container .title {
   display: flex;
   justify-content: space-between;
 }
 .content .container .title ._span {
-  padding: 10rpx;
+  padding: 10px;
 }
 .content .scroll_list {
   background-color: #fff;
-  border-radius: 6rpx;
+  border-radius: 6px;
   width: 90%;
   margin: 0 auto;
-  margin-top: 10rpx;
+  margin-top: 10px;
 }
 .content .scroll_list .title {
   display: flex;
@@ -64,26 +64,32 @@
   width: 95%;
   margin: 0 auto;
 }
+.content .scroll_list .img ::-webkit-scrollbar {
+  display: none;
+}
 .content .scroll_list .img ._img {
   display: block;
-  width: 140rpx;
-  padding-right: 10rpx;
+  width: 140px;
+  padding-right: 10px;
 }
 .content .grid {
   width: 100%;
-  margin-top: 10rpx;
+  margin-top: 10px;
 }
 .content .grid .grid_ {
   margin: 0 auto;
   background-color: #fff;
   width: 90%;
-  border-radius: 6rpx;
+  border-radius: 6px;
   justify-content: space-around;
+}
+.content .grid .grid_ ::-webkit-scrollbar {
+  display: none;
 }
 .content .grid .grid_ ._img {
   display: block;
-  width: 50rpx;
-  padding: 5rpx 5rpx;
+  width: 50px;
+  padding: 5px 5px;
 }
 .content .notice_ {
   margin-top: 400rpx;
@@ -92,7 +98,7 @@
 .content .notice_ .notice_bar {
   margin: 0 auto;
   width: 85%;
-  border-radius: 6rpx;
+  border-radius: 6px;
 }
 .content .uni-margin-wrap {
   width: 100%;
